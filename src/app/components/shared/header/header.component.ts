@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, WritableSignal } from '@angular/core';
+import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  cardProduct!: WritableSignal<number>;
+  constructor(private productService: ProductViewerService) {}
 
+  ngOnInit(): void {
+    this.cardProduct = this.productService.getCardProduct();
+  }
 }
