@@ -1,0 +1,20 @@
+<div class="container relative font-unica mx-auto h-[80vh] px-4 py-8">
+    <div class="relative flex md:items-start sm:items-center md:flex-row sm:flex-col-reverse justify-between gap-5">
+        <!-- Product Image Section -->
+        <div class="space-y-8 sm:w-1/3 sm:order-2 sm:max-md:w-full">
+            <!-- Size Selector -->
+            <app-size-selector class="space-y-6"></app-size-selector>
+
+            <!-- Color Selector -->
+            <app-color-selector class="space-y-6"></app-color-selector>
+        </div>
+        <!-- Image Section -->
+        <app-product-image class="image-navigation w-full sm:w-1/3 md:order-2 sm:order-1 sm:max-md:w-full"></app-product-image>
+        <!-- Product Details Section -->
+        <app-product-details class="space-y-6 w-1/3 sm:order-3 relative z-3 sm:max-md:w-full"></app-product-details>
+    </div>
+
+    <app-social-share></app-social-share>
+
+    <app-footer></app-footer>
+</div>

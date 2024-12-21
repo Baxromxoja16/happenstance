@@ -1,0 +1,10 @@
+<h2 class="text-sm font-medium mb-3">SELECT SIZE (US)</h2>
+<div class="flex flex-wrap gap-2">
+    @for (size of currentProduct().sizes; track size.us) {
+    <button (click)="selectSize(size.us)" [class.ring-2]="selectedSize === size.us"
+        [class.opacity-50]="!size.available" [disabled]="!size.available"
+        class="w-10 h-10 border flex items-center justify-center hover:border-black transition-colors">
+        {{ size.us }}
+    </button>
+    }
+</div>

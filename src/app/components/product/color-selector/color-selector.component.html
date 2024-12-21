@@ -1,0 +1,9 @@
+<h2 class="text-sm font-medium mb-3">SELECT COLOR</h2>
+<div class="flex gap-2">
+    @for (product of products; track product.id) {
+    <button (click)="selectColor(product.id)" [class.ring-2]="currentProduct().id === product.id"
+        class="w-8 h-8 rounded-full border shadow-sm" [style.background-color]="product.color">
+        <span class="sr-only">{{ product.colorName }}</span>
+    </button>
+    }
+</div>

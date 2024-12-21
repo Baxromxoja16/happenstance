@@ -1,0 +1,20 @@
+<div class="flex justify-between sm:static md:absolute bottom-0 left-0 w-full px-5 p-2">
+    <div class="flex justify-between gap-2">
+        <button (click)="prevProduct()" class="backdrop-blur p-2 hover:bg-white transition-all">
+            <span class="font-roboto uppercase">Prev</span>
+            <img src="assets/images/Group 14.png" alt="">
+        </button>
+
+        <button (click)="nextProduct()" class="backdrop-blur p-2 hover:bg-white transition-all">
+            <span class="font-roboto uppercase">Next</span>
+            <img src="assets/images/Group 2.png" alt="">
+        </button>
+    </div>
+    <div class="flex gap-5 items-center">
+        <img src="assets/images/Group 20.png" alt="">
+        <span>PLAY VIDEO</span>
+    </div>
+    <button class="p-3 rounded hover:bg-gray-600 transition-colors font-bold">
+        ADD TO CART — ₹{{ currentProduct().price }}
+    </button>
+</div>
