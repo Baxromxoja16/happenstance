@@ -10,6 +10,9 @@ module.exports = {
       size: {
         '128': '32rem',
       },
+      screens: {
+        'xs': '320px', 
+      }
     },
   },
   plugins: [],
