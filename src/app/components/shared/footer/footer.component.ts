@@ -27,6 +27,5 @@ export class FooterComponent implements OnInit {
 
   addTocard(): void {
     alert('Product added to card');
-    this.productService.getCardProduct().update((value) => value + 1);
   }
 }

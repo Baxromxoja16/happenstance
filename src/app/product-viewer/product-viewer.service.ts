@@ -10,11 +10,6 @@ export class ProductViewerService {
   private productsDetails: ProductDetails[] = this.product().productDetails;
   private currentProductImageNumber = signal<number>(0);
   private currentProductDetail = signal<ProductDetails>(this.productsDetails[0]);
-  private cardProduct = signal<number>(2);
-
-  getCardProduct(): WritableSignal<number> {
-    return this.cardProduct;
-  }
 
   getCurrentProduct(): WritableSignal<Product> {
     return this.product;

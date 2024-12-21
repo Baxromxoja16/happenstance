@@ -7,11 +7,4 @@ import { ProductViewerService } from '../../../product-viewer/product-viewer.ser
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnInit {
-  cardProduct!: WritableSignal<number>;
-  constructor(private productService: ProductViewerService) {}
-
-  ngOnInit(): void {
-    this.cardProduct = this.productService.getCardProduct();
-  }
-}
+export class HeaderComponent {}
