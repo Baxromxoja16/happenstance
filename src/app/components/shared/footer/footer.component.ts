@@ -1,10 +1,11 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
 import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
 import { Product, ProductDetails } from '../../../models/index.js';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
   standalone: true
