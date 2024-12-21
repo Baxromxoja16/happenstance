@@ -1,12 +1,13 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
-import { Product } from '../../../models/index.js';
 import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
+import { Product } from '../../../models/index.js';
 
 @Component({
   selector: 'app-footer',
   imports: [],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
+  standalone: true
 })
 export class FooterComponent implements OnInit {
   currentProduct!: WritableSignal<Product>;
