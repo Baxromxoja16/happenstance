@@ -1,6 +1,6 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
 import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
-import { Product } from '../../../models/index.js';
+import { Product, ProductDetails } from '../../../models/index.js';
 
 @Component({
   selector: 'app-footer',

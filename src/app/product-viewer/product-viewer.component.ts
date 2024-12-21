@@ -1,7 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, Signal, WritableSignal } from '@angular/core';
-import { Product, Size } from '../models/index.js';
-import { ProductViewerService } from './product-viewer.service.js';
+import { Component } from '@angular/core';
 import { SocialShareComponent } from '../components/shared/social-share/social-share.component.js';
 import { ColorSelectorComponent } from '../components/product/color-selector/color-selector.component.js';
 import { ProductDetailsComponent } from '../components/product/product-details/product-details.component.js';
@@ -24,17 +22,6 @@ import { FooterComponent } from '../components/shared/footer/footer.component.js
   styleUrl: './product-viewer.component.scss',
   standalone: true
 })
-export class ProductViewerComponent implements OnInit {
-  products: Product[] = [];
-  selectedSize: string = '';
-  currentProduct!: WritableSignal<Product>;
-  currentProductImageNumber!: WritableSignal<number>;
-
-  constructor(private productService: ProductViewerService) {}
-
-  ngOnInit(): void {
-    this.currentProductImageNumber = this.productService.getCurrentProductImageNumber();
-    this.currentProduct = this.productService.getCurrentProduct();
-    this.products = this.productService.getAllProducts();
-  }
+export class ProductViewerComponent {
+  constructor() {}
 }

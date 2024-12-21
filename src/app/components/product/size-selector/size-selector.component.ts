@@ -1,5 +1,5 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
-import { Product } from '../../../models/index.js';
+import { ProductDetails } from '../../../models/index.js';
 import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
 
 @Component({
@@ -10,11 +10,11 @@ import { ProductViewerService } from '../../../product-viewer/product-viewer.ser
 })
 export class SizeSelectorComponent implements OnInit {
   selectedSize: string = '';
-  currentProduct!: WritableSignal<Product>;
+  currentProduct!: WritableSignal<ProductDetails>;
   constructor(private productService: ProductViewerService) {}
 
   ngOnInit(): void {
-    this.currentProduct = this.productService.getCurrentProduct();
+    this.currentProduct = this.productService.getCurrentProductDetail();
   }
 
   selectSize(size: string): void {

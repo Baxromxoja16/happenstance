@@ -1,12 +1,10 @@
 <div>
-    <p class="text-sm text-gray-500">MEN'S SANDALS</p>
+    <p class="text-sm text-gray-500"> {{currentProduct().subname}}</p>
     <h1 class="text-3xl font-bold mt-1">
-        {{ currentProduct().name }} - {{ currentProduct().colorName }}
+        {{ currentProduct().name }} - {{ currentProductDetail().colorName }}
     </h1>
 </div>
 
 <p class="text-gray-600 roboto-regular">
-    Add a spring to your step with this elegant and sleek pair of footwear!
-    With its heavily padded ankle straps for secure footing and matted steel buckles
-    that add flair, support and style go hand in hand with these hunk sandals
+    {{currentProduct().description}}
 </p>
