@@ -1,6 +1,6 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
-import { ProductDetails } from '../../../models/index.js';
-import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
+import { ProductDetails } from '../../../../models/index.js';
+import { ProductViewerService } from '../../services/product-viewer.service.js';
 
 @Component({
   selector: 'app-size-selector',

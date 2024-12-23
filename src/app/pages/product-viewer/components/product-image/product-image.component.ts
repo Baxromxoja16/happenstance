@@ -1,7 +1,7 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
-import { ProductDetails } from '../../../models/index.js';
-import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
 import { NgOptimizedImage } from '@angular/common';
+import { ProductViewerService } from '../../services/product-viewer.service.js';
+import { ProductDetails } from '../../../../models/index.js';
 
 @Component({
   selector: 'app-product-image',

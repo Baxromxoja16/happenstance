@@ -1,6 +1,6 @@
 import { Component, WritableSignal } from '@angular/core';
-import { Product, ProductDetails } from '../../../models/index.js';
-import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
+import { Product, ProductDetails } from '../../../../models/index.js';
+import { ProductViewerService } from '../../services/product-viewer.service.js';
 
 @Component({
   selector: 'app-product-details',

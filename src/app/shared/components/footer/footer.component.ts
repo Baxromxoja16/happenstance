@@ -1,5 +1,5 @@
 import { Component, OnInit, WritableSignal } from '@angular/core';
-import { ProductViewerService } from '../../../product-viewer/product-viewer.service.js';
+import { ProductViewerService } from '../../../pages/product-viewer/services/product-viewer.service.js';
 import { Product, ProductDetails } from '../../../models/index.js';
 import { NgOptimizedImage } from '@angular/common';
 

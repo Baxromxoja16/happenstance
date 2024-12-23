@@ -1,6 +1,6 @@
 import { Injectable, signal, WritableSignal } from '@angular/core';
-import { Product, ProductDetails } from '../models/index.js';
-import db from '../../db/db.js';
+import { Product, ProductDetails } from '../../../models/index.js';
+import db from '../../../../db/db.js';
 
 @Injectable({
   providedIn: 'root'
