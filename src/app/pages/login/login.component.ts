@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { LoginService } from './services/login.service.js';
 import { Subscription } from 'rxjs';
 import { TokenService } from '../../core/services/token.service.js';
-import { MessageService } from '../../core/services/global-error.service.js';
+import { MessageService } from '../../core/services/message.service.js';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
