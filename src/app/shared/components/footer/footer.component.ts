@@ -2,6 +2,8 @@ import { Component, OnInit, WritableSignal } from '@angular/core';
 import { ProductViewerService } from '../../../pages/product-viewer/services/product-viewer.service.js';
 import { Product, ProductDetails } from '../../../models/index.js';
 import { NgOptimizedImage } from '@angular/common';
+import { CartService } from '../../../pages/cart/cart.service.js';
+import { MessageService } from '../../../core/services/message.service.js';
 
 @Component({
   selector: 'app-footer',
@@ -12,7 +14,11 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class FooterComponent implements OnInit {
   currentProduct!: WritableSignal<Product>;
-  constructor(private productService: ProductViewerService) {}
+  constructor(
+    private productService: ProductViewerService, 
+    private cartService: CartService,
+    private messageService: MessageService
+  ) {}
 
   ngOnInit(): void {
     this.currentProduct = this.productService.getCurrentProduct();
@@ -27,6 +33,7 @@ export class FooterComponent implements OnInit {
   }
 
   addTocard(): void {
-    alert('Product added to card');
+    this.cartService.addCart(this.currentProduct());
+    this.messageService.handleSuccess('Product added to cart');
   }
 }
